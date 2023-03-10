@@ -1,0 +1,27 @@
+{
+
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "gdb调试",
+            "program": "${workspaceFolder}/bin/test——wbee",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+            ], 
+            "preLaunchTask": "Build", //调试之前先构建可执行文件
+             "miDebuggerPath": "/usr/bin/gdb"
+        }
+    ]
+}
