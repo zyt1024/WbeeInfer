@@ -34,14 +34,14 @@ namespace wbee_infer {
                     outputs.push_back(output_data);
                 }                            
     }
-std::shared_ptr<Layer> SigmoidLayer::CreateInstance(const std::shared_ptr<Operator> &op) {
-  CHECK(op != nullptr);
-  CHECK(op->op_type_ == OpType::kOperatorSigmoid);
+    std::shared_ptr<Layer> SigmoidLayer::CreateInstance(const std::shared_ptr<Operator> &op) {
+    CHECK(op != nullptr);
+    CHECK(op->op_type_ == OpType::kOperatorSigmoid);
 
-  std::shared_ptr<Layer> sigmoid_layer = std::make_shared<SigmoidLayer>(op);
-  return sigmoid_layer;
-}
+    std::shared_ptr<Layer> sigmoid_layer = std::make_shared<SigmoidLayer>(op);
+    return sigmoid_layer;
+    }
 
-//创建一个KsigmoidLayer对象 向注册器中注册算子
-LayerRegistererWrapper kSigmoidLayer(OpType::kOperatorSigmoid, SigmoidLayer::CreateInstance);
+    //创建一个KsigmoidLayer对象 向注册器中注册算子
+    LayerRegistererWrapper kSigmoidLayer(OpType::kOperatorSigmoid, SigmoidLayer::CreateInstance);
 }
