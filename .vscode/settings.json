@@ -58,6 +58,7 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "armadillo": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }

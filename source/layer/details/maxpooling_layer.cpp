@@ -66,6 +66,7 @@ namespace wbee_infer {
         std::shared_ptr<Layer> max_layer = std::make_shared<MaxPoolingLayer>(op);
         return max_layer;
     }
-    // create a Wrapper object
+
+    // create a Wrapper object, and register a operator
     LayerRegistererWrapper kMaxPoolingLayer(OpType::kOperatorMaxPooling, MaxPoolingLayer::CreateInstance);
 }

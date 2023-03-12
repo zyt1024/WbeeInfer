@@ -15,8 +15,9 @@ aux_source_directory(../source/layer/abstract DIR_LAYER_ABSTRACT)
 aux_source_directory(../source/layer/details DIR_LAYER_DETAILS)
 aux_source_directory(../source/ops DIR_OPS)
 aux_source_directory(../source/runtime DIR_RUNTIME)
+aux_source_directory(../source/parser DIR_PARSER)
 
-add_executable(test_wbee ${DIR_TEST} ${DIR_DATA} ${DIR_LAYER_ABSTRACT} ${DIR_LAYER_DETAILS} ${DIR_OPS} ${DIR_RUNTIME})
+add_executable(test_wbee ${DIR_TEST} ${DIR_DATA} ${DIR_LAYER_ABSTRACT} ${DIR_LAYER_DETAILS} ${DIR_OPS} ${DIR_RUNTIME} ${DIR_PARSER})
 
 link_directories(/usr/local/lib/)
 target_link_libraries(test_wbee ${link_lib} ${link_math_lib})

@@ -10,7 +10,7 @@ namespace wbee_infer {
     }
 
 
-    std::shared_ptr<Layer> LayerRegisterer::CreateLayer(const std::shared_ptr<Operator> &op) {\
+    std::shared_ptr<Layer> LayerRegisterer::CreateLayer(const std::shared_ptr<Operator> &op) {
 
         CreateRegistry &registry = Registry(); // 如果已经存在则就不再创建
         

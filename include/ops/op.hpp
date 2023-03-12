@@ -12,6 +12,7 @@ namespace wbee_infer {
     kOperatorRelu = 0,
     kOperatorSigmoid = 1,
     kOperatorMaxPooling = 2,
+    kOperatorExpression = 3, // 表达式算子
   };
 
   class Operator {
